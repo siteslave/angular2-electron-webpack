@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLinkActive } from '@angular/router'
 
-import { IUsers } from '../shared'
+import * as moment from 'moment'
 
+import { IUsers } from '../shared'
 import { UserService } from '../providers/users.service'
 
 @Component({
@@ -12,7 +13,9 @@ import { UserService } from '../providers/users.service'
 export class HomeComponent implements OnInit {
   public users: Array<IUsers>
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) { 
+    console.log('Moment: ' + moment().format('YYYY-MM-DD'))
+  }
 
   ngOnInit() { 
     this.userService.all()
