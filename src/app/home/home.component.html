@@ -1,0 +1,19 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active">Library</li>
+</ol>
+
+<table class="table table-hover">
+  <thead>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{ u.name }}</td>
+      <td>{{ u.username | capitalize }}</td>
+      <td>{{ u.email }}</td>
+    </tr>
+  </tbody>
+</table>
