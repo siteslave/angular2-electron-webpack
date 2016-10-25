@@ -9,6 +9,8 @@ module.exports = {
     'vendor': './src/vendor.ts',
     'app': './src/main.ts'
   },
+  // for electron target
+  target: 'electron-renderer',
 
   resolve: {
     extensions: ['', '.js', '.ts']
